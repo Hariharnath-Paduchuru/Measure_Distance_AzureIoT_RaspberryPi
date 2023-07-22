@@ -22,7 +22,7 @@ GPIO_ECHO = 24
 GPIO.setup(GPIO_TRIGGER, GPIO.OUT)
 GPIO.setup(GPIO_ECHO, GPIO.IN)
 
-async def read_temp_distance():
+async def measure_distance():
     # set Trigger to HIGH
     GPIO.output(GPIO_TRIGGER, True)
 
@@ -55,7 +55,7 @@ async def send_recurring_telemetry(device_client):
 
     # Send recurring telemetry
     while True:
-        distance = await read_temp_distance()
+        distance = await measure_distance()
         msg_txt_formatted = '{{"distance": {distance}}}'
         data = msg_txt_formatted.format(distance=distance)
         msg = Message(data)
