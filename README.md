@@ -1,4 +1,4 @@
-# Measure Distance with RaspberryPi
+# Measure Distance with RaspberryPi and Send to Azure IoT Hub
 Measure Distance from Ultrasonic sensor by interfacing it with Raspberry Pi and Send to Azure IoT Hub
 
 ## Running the Python Code on Raspberry Pi
